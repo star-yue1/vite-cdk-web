@@ -22,8 +22,6 @@ const AuthRoute = ({ children, auth }: IProps) => {
   useEffect(() => {
     // 修改页面标题
     document.title = route?.title || "xxx"
-    console.log(token, route?.title, auth, isExist);
-    
     if (token == "" && auth) {
       message.error("token 过期，请重新登录!");
       navigate("/login");
