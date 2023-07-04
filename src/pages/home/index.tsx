@@ -12,7 +12,7 @@ function Home() {
       <div style={{ height: "60px", borderBottom: "solid 1px #ccc" }}>
         <Layout />
       </div>
-      <div style={{ height: "100%", display: "flex" }}>
+      <div style={{ height: "calc(100% - 61px)", display: "flex" }}>
         <LeftMenu />
         <main style={{ flex: 1 }}>
           <Outlet />
