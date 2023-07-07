@@ -1,17 +1,15 @@
 import { useEffect } from "react";
 import "./App.css";
 import RouteProvider from "@/router/provider";
-import { getInfo } from "./common/api/app";
+import { CdkListProvider } from "./contexts/CdkList";
 
 function App() {
-  useEffect(() => {
-    (async () => {
-      const list = await getInfo();
-      console.log('list', list);
-      
-    })()
-  }, [])
-  return <RouteProvider />;
+
+  return (
+    <CdkListProvider>
+      <RouteProvider />
+    </CdkListProvider>
+  );
 }
 
 export default App;

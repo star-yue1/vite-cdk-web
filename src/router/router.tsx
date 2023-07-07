@@ -32,6 +32,13 @@ export const routes: IRouter[] = [
         showMenu: true,
         auth: true,
       },
+      {
+        path: "/aotmPage",
+        component: lazy(() => import("../pages/aotmPage")),
+        title: "aotmPage",
+        showMenu: true,
+        auth: true,
+      },
     ],
   },
   {

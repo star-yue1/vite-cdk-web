@@ -24,14 +24,14 @@ export   const columns: ColumnsType<any> = [
     //     })
     //   },
     // },
-    {
-      title: '标签',
-      dataIndex: 'tag',
-      key: 'tag',
-      render: (_, record) => {
-        return record?.tag?.split(' ')?.map((item: string) => {
-          return item+ '、'
-        })
-      },
-    },
+    // {
+    //   title: '标签',
+    //   dataIndex: 'tag',
+    //   key: 'tag',
+    //   render: (_, record) => {
+    //     return record?.tag?.split(' ')?.map((item: string) => {
+    //       return item+ '、'
+    //     })
+    //   },
+    // },
   ]
