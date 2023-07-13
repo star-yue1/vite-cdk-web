@@ -1,15 +1,17 @@
 import React from "react";
-import Form from "@/pages/common/Form";
-import Table from "@/pages/common/Table";
+import Form from "@/pages/aotmPage/components/Form";
+import Table from "@/pages/aotmPage/components/Table";
+import { useInitValue } from "./utils";
 
 type IProps = {
-    contextValue?: any
+  contextValue?: any
 }
- function AotmPage({ contextValue }: IProps) {
-    console.log('contextValue', contextValue);
-    
+function AotmPage({ contextValue }: IProps) {
+  console.log('contextValue', contextValue);
+
+  useInitValue()
   return (
-    <main style={{ padding: '24px'}}>
+    <main style={{ padding: '24px' }}>
       <Form />
       <Table />
     </main>
@@ -18,5 +20,5 @@ type IProps = {
 
 
 export default function () {
-    return <AotmPage contextValue={{}}/>
+  return <AotmPage />
 }

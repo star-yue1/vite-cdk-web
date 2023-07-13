@@ -1,20 +1,20 @@
 import { Button, Card, Col, Form, Input, Row, Table } from 'antd'
 import React, { useContext, useEffect, useState } from 'react'
 
+import './style.scss';
 import { columns } from './colums';
-import './style.scss'
 import { CdkListApiContext } from '@/contexts/CdkList';
 function CdkList() {
   const [form] = Form.useForm();
   const [dataSource, setDataSource] = useState<any[]>([])
   const { getList } = useContext(CdkListApiContext)();
 
-useEffect(() => {
-  (async () => {
-    const data = await getList()
-    setDataSource(data)
-  })()
-}, [])
+  useEffect(() => {
+    (async () => {
+      const data = await getList()
+      setDataSource(data)
+    })()
+  }, [])
   return (
     <Card style={{ border: 'none' }}>
       <div className='form'>
@@ -65,7 +65,7 @@ useEffect(() => {
         </div>
       </div>
 
-      <Table dataSource={dataSource} columns={columns} bordered={false}/>
+      <Table dataSource={dataSource} columns={columns} bordered={false} />
     </Card>
   )
 }

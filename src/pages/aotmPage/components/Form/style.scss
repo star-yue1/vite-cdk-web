@@ -1,0 +1,33 @@
+.customForm {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+    &> .items {
+        // display: flex;
+        flex: 1;
+        padding-right: 14px;
+    }
+    &>.buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // flex: 1;
+        flex-direction: column;
+        border-left: 1px solid #ccc;
+        padding-left: 24px;
+
+        &>.button {
+            width: auto;
+            margin: 20px;
+
+            &:first-child {
+                margin-bottom: 5px;
+            }
+
+            &:last-child {
+                margin-top: 5px;
+            }
+        }
+    }
+}
